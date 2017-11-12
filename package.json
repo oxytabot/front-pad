@@ -1,0 +1,29 @@
+{
+  "name": "front-chatons",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "css": "npm-run-all --parallel css-compile* --sequential css-minify*",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/index.scss static/custom/index.css",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output static/custom/index.css static/custom/index.css"
+  },
+  "style": "static/custom/index.css",
+  "sass": "scss/index.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://framagit.org/altermediatic/front-pad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "clean-css-cli": "^4.1.10",
+    "node-sass": "^4.6.1",
+    "npm-run-all": "^4.1.2"
+  }
+}
