@@ -17,48 +17,29 @@
   </head>
 
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="/">
         <strong><span class="oxyta">Oxyta</span><span class="net">.net</span></strong>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#degooglisons">Dégooglisons internet</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#contact">Qui sommes-nous ?</a>
-          </li>
-        </ul>
-      </div>
     </nav>
 
     <div class="container">
-      <h1>Bloc Note</h1>
+      <h1>Bloc Note ("pads")</h1>
       <main id="classic">
 
         <div class="row">
           <div class="col-md-6">
-            <div class="">
-              <h2 class="sr-only">Qu'est-ce que c'est&nbsp;?</h2>
-              <p class="text-center"><img src="accueil/framapad.png" alt="" class="ombre"></p>
-              <div class="caption">
-                  <p>Un «&nbsp;pad&nbsp;» est un éditeur de texte collaboratif en ligne.
-                  Les contributions de chaque utilisateur sont signalées par un code couleur,
-                  apparaissent à l’écran en temps réel et
-                  sont enregistrées au fur et à mesure qu’elles sont tapées.</p>
-              </div>
+            <h2>Qu'est-ce que c'est&nbsp;?</h2>
+            <p class="text-center"><img src="accueil/framapad.png" alt="" class="ombre"></p>
+            <div class="caption">
+                <p>Un «&nbsp;pad&nbsp;» est un éditeur de texte collaboratif en ligne.
+                Les contributions de chaque utilisateur sont signalées par un code couleur,
+                apparaissent à l’écran en temps réel et
+                sont enregistrées au fur et à mesure qu’elles sont tapées.</p>
             </div>
           </div>
           <div class="col-md-6" id="howitworks">
-            <h2 class="h3">Comment ça marche&nbsp;?</h2>
+            <h2>Comment ça marche&nbsp;?</h2>
             <ul>
                 <li>Créez un pad.</li>
                 <li>Commencez à <strong>rédiger</strong> votre texte</li>
@@ -75,11 +56,21 @@
       <div id="wrapper">
       <% e.begin_block("indexWrapper"); %>
           <div id="inner">
-              <buttOn id="button" onclick="go2Random()" data-l10n-id="index.newPad"></button>
-              <label id="label" for="padname" data-l10n-id="index.createOpenPad"></label>
-              <form class="form-inline" action="#" onsubmit="go2Name();return false;">
-                  <input class="form-control" type="text" id="padname" maxlength="50" autofocus x-webkit-speech>
-                  <button class="btn btn-primary" type="submit">OK</button>
+            <div class="form-group">
+              <button class="btn btn-primary" id="button" onclick="go2Random()" data-l10n-id="index.newPad">Créez un pad</button>
+            </div>
+              <form action="#" onsubmit="go2Name();return false;">
+                <div class="text-center">
+                    <label id="label" for="padname" data-l10n-id="index.createOpenPad">
+                      ou créer / ouvrir un pad intitulé :</label>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <input class="form-control" type="text" id="padname" maxlength="50" autofocus x-webkit-speech>
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary" type="submit">OK</button>
+                  </div>
               </form>
           </div>
       <% e.end_block(); %>
