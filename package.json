@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "css": "npm-run-all --parallel css-compile* --sequential css-minify*",
+    "css": "npm-run-all --parallel css-compile* --sequential",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/index.scss static/custom/index.css",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output static/custom/index.css static/custom/index.css"
   },
