@@ -1,4 +1,4 @@
-FROM node:9-alpine
+FROM node:11-alpine
 
 RUN mkdir -p /build /opt/etherpad-lite/src/templates /opt/etherpad-lite/src/static/custom
 WORKDIR /build
