@@ -1,7 +1,7 @@
 {
   "name": "front-chatons",
   "version": "1.0.0",
-  "description": "",
+  "description": "generate html & css for the oxyta.net etherpad hompage",
   "scripts": {
     "css": "npm-run-all --parallel css-compile* --sequential",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/index.scss static/custom/index.css",
